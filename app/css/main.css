@@ -1,0 +1,368 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600|Open+Sans:300,400,600,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1, .h1 {
+  font-size: 3em; }
+
+h2, .h2 {
+  font-size: 1.5em; }
+
+h3, .h3 {
+  font-size: 1.17em; }
+
+h4, .h4 {
+  font-size: 1em; }
+
+h5, .h5 {
+  font-size: 0.83em; }
+
+h6, .h6 {
+  font-size: 0.75em; }
+
+p {
+  line-height: 1.5;
+  margin: 0 0 1em;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
+
+a,
+a:visited {
+  text-decoration: underline; }
+
+a:hover {
+  text-decoration: none; }
+
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #555559; }
+
+.hero-container {
+  position: relative;
+  display: block; }
+  .hero-container .hashtag-link {
+    vertical-align: middle;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #fff;
+    z-index: 100;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none; }
+    .hero-container .hashtag-link svg {
+      fill: #fff;
+      vertical-align: middle; }
+  .hero-container .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), transparent); }
+  .hero-container .hero-layout {
+    display: flex;
+    flex-wrap: row;
+    align-content: center;
+    height: 100%; }
+    @media (min-width: 768px) {
+      .hero-container .hero-layout {
+        flex-wrap: row; } }
+    @media (min-width: 1200px) {
+      .hero-container .hero-layout {
+        flex-wrap: wrap; } }
+    .hero-container .hero-layout img {
+      flex: 1 0 20%; }
+
+.btn {
+  background: #286782;
+  display: inline-block;
+  border-radius: 6px;
+  line-height: 65px;
+  padding: 0 3em;
+  color: #fff;
+  font-size: 1rem;
+  border: 0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s all ease-in-out; }
+  .btn:hover, .btn:focus, .btn:active {
+    background: #2e7696; }
+
+header {
+  box-shadow: 0 15px 35px rgba(50, 50, 93, 0.01), 0 5px 15px rgba(0, 0, 0, 0.07);
+  z-index: 99;
+  position: relative;
+  text-align: center; }
+  header nav .toggle-menu {
+    position: relative;
+    padding-left: 1.25em;
+    display: inline;
+    top: -25%;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    line-height: 3rem; }
+    @media (min-width: 768px) {
+      header nav .toggle-menu {
+        display: none; } }
+    header nav .toggle-menu::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.21em;
+      bottom: 0.21em;
+      width: 1em;
+      background: linear-gradient(to bottom, #000, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%); }
+  header nav ul {
+    display: none; }
+    @media (min-width: 768px) {
+      header nav ul {
+        display: flex;
+        justify-content: center; } }
+    header nav ul li {
+      line-height: 5.5em;
+      color: #000;
+      padding: 0 2.2em; }
+      header nav ul li a {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #555559;
+        text-decoration: none; }
+        header nav ul li a:hover {
+          color: #286782; }
+
+.mobile-nav {
+  display: none; }
+
+.overlay {
+  background: rgba(40, 103, 130, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s all ease-in-out;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: block; }
+  .overlay ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .overlay ul li {
+      display: block;
+      width: 100%; }
+      .overlay ul li a {
+        color: #fff;
+        font-size: 2rem;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        margin: 1rem 0; }
+        .overlay ul li a:hover {
+          text-decoration: underline; }
+  .overlay .close {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    display: block;
+    top: 2rem;
+    left: 2rem; }
+  .overlay .close:after {
+    content: '';
+    height: 30px;
+    border-left: 2px solid #fff;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 28px; }
+  .overlay .close:before {
+    content: '';
+    height: 30px;
+    border-left: 2px solid #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 28px; }
+
+.hp-section h2 {
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 1.5em; }
+  .hp-section h2:before {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: #286782;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    left: -50px;
+    top: 13px; }
+
+.hp-section.first {
+  background: #fbfafa;
+  padding: 10rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .hp-section.first .content {
+    width: 52em; }
+  .hp-section.first .logo-hotdog {
+    margin-bottom: 2rem; }
+  .hp-section.first .jumbo {
+    margin-bottom: 3rem; }
+
+.hp-section.second {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .hp-section.second {
+      flex-direction: row; } }
+  .hp-section.second .col {
+    flex: 2 0 50%; }
+    .hp-section.second .col.content {
+      padding: 5rem; }
+      @media (min-width: 768px) {
+        .hp-section.second .col.content {
+          padding: 15rem 8rem; } }
+    .hp-section.second .col.product-img {
+      background: url("../img/hp-hotdog-1.jpg");
+      background-position: center center;
+      background-size: cover;
+      height: 40vh; }
+      @media (min-width: 768px) {
+        .hp-section.second .col.product-img {
+          height: auto; } }
+
+.hp-section.third {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .hp-section.third {
+      flex-direction: row; } }
+  .hp-section.third .col {
+    flex: 2 0 50%; }
+    .hp-section.third .col.content {
+      padding: 5rem; }
+      @media (min-width: 768px) {
+        .hp-section.third .col.content {
+          padding: 15rem 8rem; } }
+    .hp-section.third .col.product-img {
+      background: url("../img/hp-hotdog-2.jpg");
+      background-position: center center;
+      background-size: cover;
+      height: 40vh; }
+      @media (min-width: 768px) {
+        .hp-section.third .col.product-img {
+          height: auto; } }
+
+.hp-section.fourth {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .hp-section.fourth {
+      flex-direction: row; } }
+  .hp-section.fourth .col {
+    flex: 2 0 50%; }
+    .hp-section.fourth .col.content {
+      padding: 5rem; }
+      @media (min-width: 768px) {
+        .hp-section.fourth .col.content {
+          padding: 15rem 8rem; } }
+    .hp-section.fourth .col.product-img {
+      background: url("../img/hp-hotdog-3.jpg");
+      background-position: center center;
+      background-size: cover;
+      height: 40vh; }
+      @media (min-width: 768px) {
+        .hp-section.fourth .col.product-img {
+          height: auto; } }
+
+@media (min-width: 768px) {
+  .inline {
+    display: flex;
+    flex-direction: row; } }
+
+.inline li {
+  border-left: 1px solid #555559;
+  padding: 0 1rem; }
+  .inline li:first-child {
+    border-left: none; }
+
+footer {
+  background: #efefef;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0; }
+  @media (min-width: 768px) {
+    footer {
+      display: flex;
+      flex-direction: row; } }
+  footer p {
+    margin: 0; }
+  footer .left {
+    padding: 1rem; }
